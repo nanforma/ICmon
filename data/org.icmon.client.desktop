@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+Name=ICmon
+GenericName=IP camera client
+GenericName[ru]=Клиент IP-камер
+GenericName[uk]=Клієнт IP-камер
+Comment=Live view, playback and download for iCSee-compatible IP cameras
+Comment[ru]=Просмотр, архив и загрузка записей IP-камер, совместимых с iCSee
+Comment[uk]=Перегляд, архів і завантаження записів IP-камер, сумісних з iCSee
+Exec=ICmon
+Icon=icmon
+Terminal=false
+Categories=AudioVideo;Video;Network;GTK;
+Keywords=camera;ipcam;cctv;onvif;rtsp;icsee;
+StartupWMClass=org.icmon.client
+StartupNotify=true

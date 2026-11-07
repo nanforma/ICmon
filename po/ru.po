@@ -1,0 +1,534 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\nLanguage: ru\nPlural-Forms: nplurals=1; plural=0;\n"
+
+msgid "The password contains non-ASCII characters (wrong keyboard layout?). Nothing was saved."
+msgstr "Пароль содержит не-ASCII символы (неверная раскладка?). Ничего не сохранено."
+
+msgid "Enter the password, or tick \"The camera has no password\"."
+msgstr "Введите пароль или отметьте «У камеры нет пароля»."
+
+msgid "Click again to delete"
+msgstr "Нажмите ещё раз для удаления"
+
+msgid "Search failed: "
+msgstr "Поиск не удался: "
+
+msgid "No cameras answered. Not every camera replies to the search, and a router may block it: enter the address by hand."
+msgstr "Камеры не ответили. Не каждая камера отвечает на поиск, роутер тоже может его блокировать: введите адрес вручную."
+
+msgid "Click a camera in the list to fill in its address."
+msgstr "Нажмите на камеру в списке, чтобы подставить её адрес."
+
+msgid "(no name)"
+msgstr "(без имени)"
+
+msgid "Searching…"
+msgstr "Поиск…"
+
+msgid "Camera settings"
+msgstr "Настройки камеры"
+
+msgid "Add camera"
+msgstr "Добавить камеру"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Search for cameras on the local network"
+msgstr "Поиск камер в локальной сети"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Address"
+msgstr "Адрес"
+
+msgid "Camera address"
+msgstr "Адрес камеры"
+
+msgid "Port (archive)"
+msgstr "Порт (архив)"
+
+msgid "User"
+msgstr "Пользователь"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "The camera has no password"
+msgstr "У камеры нет пароля"
+
+msgid "Save the password in the system keyring"
+msgstr "Сохранить пароль в системной связке ключей"
+
+msgid "Save the password in the keyring (not available in this build: kept until the program closes)"
+msgstr "Сохранить пароль в связке ключей (в этой сборке недоступно: хранится до закрытия программы)"
+
+msgid "Leave the password empty to keep the saved one."
+msgstr "Оставьте пароль пустым, чтобы сохранить прежний."
+
+msgid "Reverse PTZ left / right"
+msgstr "Реверс PTZ влево / вправо"
+
+msgid "Live view (RTSP)"
+msgstr "Живой просмотр (RTSP)"
+
+msgid "Use the sub stream when several cameras are shown"
+msgstr "Использовать дополнительный поток, когда показано несколько камер"
+
+msgid "RTSP port"
+msgstr "Порт RTSP"
+
+msgid "Channel"
+msgstr "Канал"
+
+msgid "Main stream number"
+msgstr "Номер основного потока"
+
+msgid "Sub stream number"
+msgstr "Номер дополнительного потока"
+
+msgid "RTSP address"
+msgstr "Адрес RTSP"
+
+msgid "Delete camera"
+msgstr "Удалить камеру"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Camera light on / off (shows what was done in this session)"
+msgstr "Свет камеры вкл / выкл (показывает то, что сделано в этом сеансе)"
+
+msgid "Save the current frame (PNG, full camera resolution)"
+msgstr "Сохранить текущий кадр (PNG, полное разрешение камеры)"
+
+msgid "Sound on / off (off by default)"
+msgstr "Звук вкл / выкл (по умолчанию выключен)"
+
+msgid "Output volume"
+msgstr "Громкость"
+
+msgid "Connecting…"
+msgstr "Подключение…"
+
+msgid "Connection lost, reconnecting ("
+msgstr "Соединение потеряно, переподключение ("
+
+msgid "(automatic reconnection gave up; press the restart button)"
+msgstr "(автоматическое переподключение прекращено; нажмите кнопку перезапуска)"
+
+msgid "No folder for saved media is set."
+msgstr "Папка для сохранения не задана."
+
+msgid "Cannot create the folder "
+msgstr "Не удалось создать папку "
+
+msgid "Frame saved: "
+msgstr "Кадр сохранён: "
+
+msgid "Could not save the frame: "
+msgstr "Не удалось сохранить кадр: "
+
+msgid "Fold / unfold"
+msgstr "Свернуть / развернуть"
+
+msgid "Up"
+msgstr "Вверх"
+
+msgid "Left"
+msgstr "Влево"
+
+msgid "Right"
+msgstr "Вправо"
+
+msgid "Down"
+msgstr "Вниз"
+
+msgid "Zoom in"
+msgstr "Приблизить"
+
+msgid "Zoom out"
+msgstr "Отдалить"
+
+msgid "Saved positions"
+msgstr "Сохранённые позиции"
+
+msgid "Add a saved position"
+msgstr "Добавить позицию"
+
+msgid "Position number (1-16)"
+msgstr "Номер позиции (1-16)"
+
+msgid "Save position"
+msgstr "Сохранить позицию"
+
+msgid "Remove the selected saved position from the list"
+msgstr "Убрать выбранную позицию из списка"
+
+msgid "Number of cameras on the screen"
+msgstr "Количество камер на экране"
+
+msgid "Restart the streams of the cameras shown (use after a failure)"
+msgstr "Перезапустить потоки показанных камер (после сбоя)"
+
+msgid "Live View"
+msgstr "Живой просмотр"
+
+msgid "Playback"
+msgstr "Архив"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Cameras"
+msgstr "Камеры"
+
+msgid "Add a camera"
+msgstr "Добавить камеру"
+
+msgid "Remove the selected camera"
+msgstr "Удалить выбранную камеру"
+
+msgid "Controls"
+msgstr "Управление"
+
+msgid "Calendar"
+msgstr "Календарь"
+
+msgid "Recordings of the day"
+msgstr "Записи за день"
+
+msgid "Restart the stream of this camera"
+msgstr "Перезапустить поток этой камеры"
+
+msgid "Start the live stream"
+msgstr "Запустить поток"
+
+msgid "Stop the live stream"
+msgstr "Остановить поток"
+
+msgid "Saved media go to "
+msgstr "Медиа сохраняются в "
+
+msgid "Select a camera to remove."
+msgstr "Выберите камеру для удаления."
+
+msgid "Remove camera"
+msgstr "Удалить камеру"
+
+msgid "Remove the camera \""
+msgstr "Удалить камеру «"
+
+msgid "\" from the list? Its saved password is deleted too. Recordings on the camera are not touched."
+msgstr "» из списка? Её сохранённый пароль тоже удаляется. Записи на камере не затрагиваются."
+
+msgid "Remove"
+msgstr "Удалить"
+
+msgid "The password is kept until the program closes."
+msgstr "Пароль хранится до закрытия программы."
+
+msgid "The saved password could not be removed from the keyring."
+msgstr "Не удалось удалить сохранённый пароль из связки ключей."
+
+msgid "The password of this camera is not saved. Open its settings (gear icon) and enter it."
+msgstr "Пароль этой камеры не сохранён. Откройте её настройки (значок шестерёнки) и введите его."
+
+msgid "No cameras yet. Press the + button above the list to add a camera."
+msgstr "Камер пока нет. Нажмите + над списком, чтобы добавить камеру."
+
+msgid "Stopped. Press the start icon in the camera list."
+msgstr "Остановлено. Нажмите значок запуска в списке камер."
+
+msgid "PTZ stop: "
+msgstr "PTZ стоп: "
+
+msgid "Go to this saved position"
+msgstr "Перейти в эту позицию"
+
+msgid "Saved positions: "
+msgstr "Сохранённые позиции: "
+
+msgid "Moving to position "
+msgstr "Переход в позицию "
+
+msgid "Select a saved position first."
+msgstr "Сначала выберите сохранённую позицию."
+
+msgid "Remove saved position"
+msgstr "Удалить позицию"
+
+msgid "Remove position "
+msgstr "Убрать позицию "
+
+msgid " from the list? The camera keeps it; it is only forgotten here."
+msgstr " из списка? Камера её сохраняет, забывается только здесь."
+
+msgid "Position saved as "
+msgstr "Позиция сохранена как "
+
+msgid "Position "
+msgstr "Позиция "
+
+msgid " added to the list."
+msgstr " добавлена в список."
+
+msgid "Light: the camera accepted the command (on)."
+msgstr "Свет: камера приняла команду (вкл)."
+
+msgid "Light: the camera accepted the command (off)."
+msgstr "Свет: камера приняла команду (выкл)."
+
+msgid "Light: "
+msgstr "Свет: "
+
+msgid "No camera selected."
+msgstr "Камера не выбрана."
+
+msgid "Download the selected recording (.mkv); press again to stop"
+msgstr "Скачать выбранную запись (.mkv); повторное нажатие останавливает"
+
+msgid "Playback speed -4×, -2× (slow motion), 1×, 2×, 4× (sound is off when not 1×)"
+msgstr "Скорость воспроизведения -4×, -2× (замедление), 1×, 2×, 4× (не на 1× звук выключен)"
+
+msgid "Previous recording"
+msgstr "Предыдущая запись"
+
+msgid "Play / pause"
+msgstr "Воспроизведение / пауза"
+
+msgid "Stop"
+msgstr "Стоп"
+
+msgid "Next recording"
+msgstr "Следующая запись"
+
+msgid "Calendar: %zu day(s) with recordings in %04d-%02d (%d day(s) refused by the camera)."
+msgstr "Календарь: дней с записями в %2$04d-%3$02d: %1$zu (камера отказала для дней: %4$d)."
+
+msgid "Calendar marks could not be read: "
+msgstr "Метки календаря не прочитаны: "
+
+msgid "Connecting and reading the list of recordings…"
+msgstr "Подключение и чтение списка записей…"
+
+msgid "%zu recording(s) on this day."
+msgstr "Записей за этот день: %zu."
+
+msgid "No recordings on this day."
+msgstr "В этот день записей нет."
+
+msgid "The camera rejected the login: "
+msgstr "Камера отклонила вход: "
+
+msgid " Open the camera settings (gear icon) and check the user name and password."
+msgstr " Откройте настройки камеры (шестерёнка) и проверьте имя пользователя и пароль."
+
+msgid "Error: "
+msgstr "Ошибка: "
+
+msgid "No camera is ready for playback: check the camera settings."
+msgstr "Нет камеры, готовой к воспроизведению: проверьте настройки камеры."
+
+msgid "no recording"
+msgstr "нет записи"
+
+msgid "Playing the camera's archive from "
+msgstr "Воспроизведение архива камеры с "
+
+msgid "Playback finished."
+msgstr "Воспроизведение завершено."
+
+msgid "Stopped."
+msgstr "Остановлено."
+
+msgid "This is the last recording of the day."
+msgstr "Это последняя запись за день."
+
+msgid "This is the first recording of the day."
+msgstr "Это первая запись за день."
+
+msgid "Select a recording in the list first."
+msgstr "Сначала выберите запись в списке."
+
+msgid "Cancelling the download…"
+msgstr "Отмена загрузки…"
+
+msgid "A download is already running; wait for it or press the button again to stop it."
+msgstr "Загрузка уже идёт; дождитесь её или нажмите кнопку ещё раз, чтобы остановить."
+
+msgid "No camera is ready for downloading."
+msgstr "Нет камеры, готовой к загрузке."
+
+msgid "Downloading… %.1f MB, %d s of video"
+msgstr "Загрузка… %.1f МБ, %d с видео"
+
+msgid "Saved: "
+msgstr "Сохранено: "
+
+msgid "Downloading…"
+msgstr "Загрузка…"
+
+msgid "Folder for saved media"
+msgstr "Папка для сохранения"
+
+msgid "Select"
+msgstr "Выбрать"
+
+msgid "Enter an absolute folder path (it starts with /)."
+msgstr "Введите абсолютный путь к папке (начинается с /)."
+
+msgid "Folder for saved pictures and video"
+msgstr "Папка для сохранённых снимков и видео"
+
+msgid "Choose a folder"
+msgstr "Выбрать папку"
+
+msgid "Default"
+msgstr "По умолчанию"
+
+msgid "Saved frames go to the subfolder \"picture\", downloaded recordings to \"video\"."
+msgstr "Снимки сохраняются в подпапку «picture», скачанные записи — в «video»."
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "System default"
+msgstr "Как в системе"
+
+msgid "The language changes after the program is restarted."
+msgstr "Язык изменится после перезапуска программы."
+
+msgid "The password could not be saved in the keyring ("
+msgstr "Не удалось сохранить пароль в связке ключей ("
+
+msgid "). It is kept until the program closes."
+msgstr "). Он хранится до закрытия программы."
+
+msgid "The password is not saved and the keyring is not available ("
+msgstr "Пароль не сохранён, а связка ключей недоступна ("
+
+msgid "). Open the camera settings (gear icon) and enter the password."
+msgstr "). Откройте настройки камеры (шестерёнка) и введите пароль."
+
+msgid "PTZ: "
+msgstr "PTZ: "
+
+msgid " (the PTZ command format is taken from other programs, not verified on this camera)"
+msgstr " (формат команд PTZ взят из других программ, на этой камере не проверен)"
+
+msgid " (command format not verified on this camera)"
+msgstr " (формат команды на этой камере не проверен)"
+
+msgid "Position in the camera will be overwritten"
+msgstr "Позиция в камере будет перезаписана"
+
+msgid "Start with the window maximized"
+msgstr "Запускать с развёрнутым окном"
+
+msgid " exists; "
+msgstr " существует; "
+
+msgid " is free: press Save position to use it."
+msgstr " свободна: нажмите «Сохранить позицию», чтобы использовать её."
+
+msgid "All 16 positions are used."
+msgstr "Все 16 позиций заняты."
+
+msgid " stored again at the current camera position."
+msgstr " сохранена заново в текущем положении камеры."
+
+msgid " added to the list (not stored in the camera)."
+msgstr " добавлена в список (в камере не сохранена)."
+
+msgid ": saving to the camera is not available yet."
+msgstr ": сохранение в камеру пока недоступно."
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Time"
+msgstr "Время"
+
+msgid "No recordings on this day (the camera does not answer for it)."
+msgstr "В этот день записей нет (камера на него не отвечает)."
+
+msgid "Delete saved position"
+msgstr "Удалить сохранённую позицию"
+
+msgid "Delete position "
+msgstr "Удалить позицию "
+
+msgid " in the camera? It disappears in the phone app too."
+msgstr " в камере? Она исчезнет и в телефонном приложении."
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid " cleared in the camera."
+msgstr " очищена в камере."
+
+msgid " deleted in the camera."
+msgstr " удалена в камере."
+
+msgid "Cannot delete the position: "
+msgstr "Не удалось удалить позицию: "
+
+msgid "Cannot read the saved positions from the camera: "
+msgstr "Не удалось прочитать сохранённые позиции из камеры: "
+
+msgid "The camera reports no saved positions over ONVIF; the list is kept."
+msgstr "Камера по ONVIF не показывает позиций; список сохранён."
+
+msgid "Saved positions read from the camera: "
+msgstr "Сохранённых позиций в камере: "
+
+msgid "Move the camera up (Ctrl+Up)"
+msgstr "Переместить камеру выше (Ctrl+Вверх)"
+
+msgid "Move the camera down (Ctrl+Down)"
+msgstr "Переместить камеру ниже (Ctrl+Вниз)"
+
+msgid " is stored in the camera."
+msgstr " сохранена в камере."
+
+msgid "The camera does not list position "
+msgstr "Камера не показывает позицию "
+
+msgid " yet; trying the other save command."
+msgstr " пока; пробую другую команду сохранения."
+
+msgid "The camera did not confirm position "
+msgstr "Камера не подтвердила позицию "
+
+msgid " (see the terminal log)."
+msgstr " (см. журнал в терминале)."
+
+msgid "Reverse PTZ up / down"
+msgstr "Реверс PTZ вверх / вниз"
+
+msgid "Main"
+msgstr "Основные"
+
+msgid "Additional"
+msgstr "Дополнительно"
+
+msgid "General"
+msgstr "Общие"
+
+msgid "About"
+msgstr "О программе"
+
+msgid "Version"
+msgstr "Версия"
+
+msgid "Protocols"
+msgstr "Протоколы"
+
+msgid "A native Linux client for iCSee-compatible IP cameras: live view, playback and download of recordings, PTZ control and saved positions."
+msgstr "Нативный клиент для Linux для IP-камер, совместимых с iCSee: просмотр в реальном времени, воспроизведение и загрузка записей, управление PTZ и сохранённые положения."

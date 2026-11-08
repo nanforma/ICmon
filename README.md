@@ -15,6 +15,7 @@ A native Linux client for iCSee-compatible (XM / Xiongmai) IP cameras: live view
 - **Saved positions** are stored in the camera itself (read, saved and deleted on the camera through DVRIP, with ONVIF as the fallback), so the phone app and ICmon show the same list.
 - **Passwords** are kept in the system keyring (libsecret), not in the config file.
 - **Languages:** English, Ukrainian, Russian (Settings → Language; restart to apply).
+- **Video decoding** on the processor by default (keeps the video card cool); a switch in Settings turns on hardware decoding (NVDEC, VA-API) after a restart.
 - Follows the system theme (light and dark) and its window decorations.
 
 ## Protocols
@@ -89,7 +90,9 @@ Keyboard shortcuts:
 | Ctrl+R | Store the selected saved position again |
 | Ctrl+Q | Quit |
 
-Settings (the gear in the left bar): the folder for pictures and video (`picture` and `video` subfolders), language, start maximized.
+Settings (the gear in the left bar): the folder for pictures and video (`picture` and `video` subfolders), language, start maximized, hardware video decoding (off by default; applies after a restart; `ICMON_HWDEC=1` or `0` in the environment overrides it).
+
+The "About" tab shows the version and the GTK and GStreamer versions in use.
 
 ## Files
 

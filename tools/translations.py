@@ -178,4 +178,6 @@ T = {
 "Version": ("Версия", "Версія"),
 "Protocols": ("Протоколы", "Протоколи"),
 "A native Linux client for iCSee-compatible IP cameras: live view, playback and download of recordings, PTZ control and saved positions.": ("Нативный клиент для Linux для IP-камер, совместимых с iCSee: просмотр в реальном времени, воспроизведение и загрузка записей, управление PTZ и сохранённые положения.", "Нативний клієнт для Linux для IP-камер, сумісних з iCSee: перегляд наживо, відтворення та завантаження записів, керування PTZ і збережені положення."),
+"Hardware video decoding": ("Аппаратное декодирование видео", "Апаратне декодування відео"),
+"Off: the processor decodes the video (the video card stays cooler). Takes effect after the program is restarted.": ("Выкл.: видео декодирует процессор (видеокарта холоднее). Действует после перезапуска программы.", "Вимк.: відео декодує процесор (відеокарта холодніша). Діє після перезапуску програми."),
 }

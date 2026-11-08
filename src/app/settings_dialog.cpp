@@ -68,8 +68,8 @@ struct Dlg {
     GtkNativeDialog* native = nullptr;  // GTK 4.6 path: the chooser while it is open
     bool choosing = false;              // GTK 4.10+ path
     std::string fallback;
-    std::function<void(const std::string&, const std::string&, bool)> on_save;
-    GtkWidget *lang = nullptr, *maximize = nullptr;
+    std::function<void(const std::string&, const std::string&, bool, bool)> on_save;
+    GtkWidget *lang = nullptr, *maximize = nullptr, *hwdec = nullptr;
 };
 
 const char* const kLangCodes[4] = {"", "en", "uk", "ru"};
@@ -143,7 +143,7 @@ void save_clicked(GtkButton*, gpointer p) {
         return;
     }
     guint li = gtk_drop_down_get_selected(GTK_DROP_DOWN(d->lang));
-    if (d->on_save) d->on_save(path, kLangCodes[li < 4 ? li : 0], gtk_switch_get_active(GTK_SWITCH(d->maximize)));
+    if (d->on_save) d->on_save(path, kLangCodes[li < 4 ? li : 0], gtk_switch_get_active(GTK_SWITCH(d->maximize)), gtk_switch_get_active(GTK_SWITCH(d->hwdec)));
     gtk_window_destroy(GTK_WINDOW(d->win));
 }
 
@@ -158,8 +158,8 @@ void destroyed(GtkWidget*, gpointer p) {
 }
 }  // namespace
 
-void show_settings_dialog(GtkWindow* parent, const std::string& current, const std::string& fallback, const std::string& language, bool maximized,
-                          std::function<void(const std::string&, const std::string&, bool)> on_save) {
+void show_settings_dialog(GtkWindow* parent, const std::string& current, const std::string& fallback, const std::string& language, bool maximized, bool hw_decoding,
+                          std::function<void(const std::string&, const std::string&, bool, bool)> on_save) {
     Dlg* d = new Dlg();
     d->fallback = fallback;
     d->on_save = std::move(on_save);
@@ -280,6 +280,23 @@ void show_settings_dialog(GtkWindow* parent, const std::string& current, const s
     gtk_box_append(GTK_BOX(mrow), mlab);
     gtk_box_append(GTK_BOX(mrow), d->maximize);
     gtk_box_append(GTK_BOX(box), mrow);
+
+    GtkWidget* hrow = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 12);
+    gtk_widget_set_margin_top(hrow, 8);
+    GtkWidget* hlab = gtk_label_new(_("Hardware video decoding"));
+    gtk_widget_set_hexpand(hlab, TRUE);
+    gtk_label_set_xalign(GTK_LABEL(hlab), 0);
+    d->hwdec = gtk_switch_new();
+    gtk_switch_set_active(GTK_SWITCH(d->hwdec), hw_decoding);
+    gtk_box_append(GTK_BOX(hrow), hlab);
+    gtk_box_append(GTK_BOX(hrow), d->hwdec);
+    gtk_box_append(GTK_BOX(box), hrow);
+    GtkWidget* hhint = gtk_label_new(_("Off: the processor decodes the video (the video card stays cooler). Takes effect after the program is restarted."));
+    gtk_label_set_xalign(GTK_LABEL(hhint), 0);
+    gtk_label_set_wrap(GTK_LABEL(hhint), TRUE);
+    gtk_widget_set_size_request(hhint, 488, 44);
+    gtk_widget_add_css_class(hhint, "dim-label");
+    gtk_box_append(GTK_BOX(box), hhint);
 
     d->msg = gtk_label_new("");
     gtk_label_set_xalign(GTK_LABEL(d->msg), 0);

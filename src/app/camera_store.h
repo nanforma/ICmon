@@ -31,6 +31,7 @@ struct StoreData {
     int layout = 1;           // cameras shown at once in live view: 1, 2, 4 or 16 (4 x 4)
     std::string selected_id;  // last selected camera
     bool start_maximized = false;  // open the window maximized
+    bool hw_decoding = false;      // let GStreamer use hardware decoders (NVDEC, VA-API); off = software decoding
     std::string language;     // "" = system, else "en", "uk" or "ru"
     std::string media_dir;    // base folder for saved frames ("pictures") and video ("video"); empty = default_media_dir()
 };
@@ -62,6 +63,8 @@ LoadResult load_store(const std::string& path);
 
 // Only the "language" entry of the file ("" when missing or unreadable); no side effects, used before the GUI starts.
 std::string read_language(const std::string& path);
+// The "hw_decoding" setting alone, for the start of the program (false if the file is missing or unreadable).
+bool read_hw_decoding(const std::string& path);
 
 // Writes through a temporary file and a rename. Returns an error text, or "" on success.
 std::string save_store(const std::string& path, const StoreData& d);

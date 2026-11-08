@@ -1,5 +1,6 @@
 #include <malloc.h>
 #include <gtk/gtk.h>
+#include <gst/gst.h>
 #include <locale.h>
 
 #include <libgen.h>
@@ -23,6 +24,29 @@ static void on_activate(GtkApplication* app, gpointer) {
     }
     gtk_window_set_default_icon_name("icmon");
     new icmon::MainWindow(app);  // owns itself: deleted when its window is destroyed
+}
+
+// Hardware decoders (NVDEC, VA-API) win decodebin's choice when installed, but their frames sit in GPU memory: every frame is
+// then copied back to system memory for the CPU scaler and uploaded again by GTK, which loads and heats the video card more
+// than plain software decoding of these streams. So they are ranked below the libav decoders unless the setting (or ICMON_HWDEC=1) asks for them.
+static void prefer_software_decoders(bool settings_hw) {
+    gst_init(nullptr, nullptr);
+    const char* hw = getenv("ICMON_HWDEC");  // overrides the setting: 1 = hardware, 0 = software
+    if (hw && *hw) { if (*hw != '0') return; }
+    else if (settings_hw) return;
+    GstRegistry* reg = gst_registry_get();
+    GList* all = gst_registry_get_feature_list(reg, GST_TYPE_ELEMENT_FACTORY);
+    for (GList* l = all; l; l = l->next) {
+        GstPluginFeature* f = GST_PLUGIN_FEATURE(l->data);
+        const char* name = gst_plugin_feature_get_name(f);
+        if (!name) continue;
+        std::string s = name;
+        bool hwdec = s.rfind("nv", 0) == 0 && s.find("dec") != std::string::npos;
+        hwdec = hwdec || (s.rfind("va", 0) == 0 && s.find("dec") != std::string::npos && s != "vaapidecodebin");
+        hwdec = hwdec || (s.rfind("vaapi", 0) == 0 && s.find("dec") != std::string::npos);
+        if (hwdec) gst_plugin_feature_set_rank(f, GST_RANK_NONE);
+    }
+    gst_plugin_feature_list_free(all);
 }
 
 int main(int argc, char** argv) {
@@ -49,6 +73,8 @@ int main(int argc, char** argv) {
     bindtextdomain(GETTEXT_DOMAIN, dir.empty() ? nullptr : dir.c_str());
     textdomain(GETTEXT_DOMAIN);
     bind_textdomain_codeset(GETTEXT_DOMAIN, "UTF-8");
+
+    prefer_software_decoders(icmon::read_hw_decoding(icmon::default_config_dir() + "/cameras.json"));
 
 #if GLIB_CHECK_VERSION(2, 74, 0)
     GtkApplication* app = gtk_application_new("org.icmon.client", G_APPLICATION_DEFAULT_FLAGS);

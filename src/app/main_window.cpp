@@ -812,11 +812,12 @@ std::string MainWindow::media_dir() const { return store_.media_dir.empty() ? de
 
 void MainWindow::settings_clicked(GtkButton*, gpointer self) {
     MainWindow* w = (MainWindow*)self;
-    show_settings_dialog(GTK_WINDOW(w->win_), w->media_dir(), default_media_dir(), w->store_.language, w->store_.start_maximized,
-                         [w](const std::string& dir, const std::string& lang, bool maximized) {
+    show_settings_dialog(GTK_WINDOW(w->win_), w->media_dir(), default_media_dir(), w->store_.language, w->store_.start_maximized, w->store_.hw_decoding,
+                         [w](const std::string& dir, const std::string& lang, bool maximized, bool hwdec) {
                              w->store_.media_dir = dir == default_media_dir() ? "" : dir;  // empty = follow the default
                              w->store_.language = lang;
                              w->store_.start_maximized = maximized;
+                             w->store_.hw_decoding = hwdec;
                              w->save_config();
                              w->live_.set_media_dir(w->media_dir());
                              w->playback_.set_media_dir(w->media_dir());

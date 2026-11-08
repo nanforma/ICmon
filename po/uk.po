@@ -532,3 +532,9 @@ msgstr "Протоколи"
 
 msgid "A native Linux client for iCSee-compatible IP cameras: live view, playback and download of recordings, PTZ control and saved positions."
 msgstr "Нативний клієнт для Linux для IP-камер, сумісних з iCSee: перегляд наживо, відтворення та завантаження записів, керування PTZ і збережені положення."
+
+msgid "Hardware video decoding"
+msgstr "Апаратне декодування відео"
+
+msgid "Off: the processor decodes the video (the video card stays cooler). Takes effect after the program is restarted."
+msgstr "Вимк.: відео декодує процесор (відеокарта холодніша). Діє після перезапуску програми."

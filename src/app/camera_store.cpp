@@ -149,6 +149,7 @@ LoadResult load_store(const std::string& path) {
         r.data.media_dir = j["media_dir"].str();
         r.data.language = j["language"].str();
         r.data.start_maximized = j["start_maximized"].boolean(false);
+        r.data.hw_decoding = j["hw_decoding"].boolean(false);
         normalize_slots(r.data);
     } catch (const xm::Error& e) {
         r.data = StoreData();
@@ -156,6 +157,18 @@ LoadResult load_store(const std::string& path) {
         fs::rename(path, path + ".bad", ec);  // keep it for the user, and never overwrite it by saving
     }
     return r;
+}
+
+bool read_hw_decoding(const std::string& path) {
+    std::ifstream in(path);
+    if (!in) return false;
+    std::stringstream ss;
+    ss << in.rdbuf();
+    try {
+        return xm::Json::parse(ss.str())["hw_decoding"].boolean(false);
+    } catch (const xm::Error&) {
+        return false;
+    }
 }
 
 std::string read_language(const std::string& path) {
@@ -172,7 +185,7 @@ std::string read_language(const std::string& path) {
 
 std::string save_store(const std::string& path, const StoreData& d) {
     xm::Json j = xm::Json::object();
-    j.set("version", 1).set("layout", d.layout).set("selected_id", d.selected_id).set("media_dir", d.media_dir).set("language", d.language).set("start_maximized", d.start_maximized);
+    j.set("version", 1).set("layout", d.layout).set("selected_id", d.selected_id).set("media_dir", d.media_dir).set("language", d.language).set("start_maximized", d.start_maximized).set("hw_decoding", d.hw_decoding);
     xm::Json arr = xm::Json::array();
     for (const CameraConfig& c : d.cameras) arr.push(to_json(c));
     j.set("cameras", std::move(arr));

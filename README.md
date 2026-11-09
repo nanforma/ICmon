@@ -36,7 +36,7 @@ A native Linux client for iCSee-compatible (XM / Xiongmai) IP cameras: live view
 
 ## Tested hardware
 
-ICmon was developed and tested against one camera: **IPG-X6C-WEQ2** (XM530V200 chip, dual lens, firmware 000807DD). Other XM-based cameras may work but have not been tried. Reports are welcome.
+ICmon was developed and tested against one camera: **IPG-X6C-WEQ2** (XM530V200 chip, dual lens, firmware 000807DD). Other XM-based cameras may work but have not been tried.
 
 Known limitations:
 

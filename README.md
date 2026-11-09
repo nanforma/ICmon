@@ -6,6 +6,13 @@ A native Linux client for iCSee-compatible (XM / Xiongmai) IP cameras: live view
 
 > ICmon is an independent project. It is not affiliated with, endorsed by or supported by iCSee, Xiongmai or any camera vendor.
 
+## Screenshots
+
+<p>
+  <img src="screenshots/cameras.png" width="400">
+  <img src="screenshots/playback.png" width="400">
+</p>
+
 ## Features
 
 - **Live view** over RTSP, with sound, snapshots and the camera's night light (where the camera supports it).

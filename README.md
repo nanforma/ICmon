@@ -69,7 +69,7 @@ Build and run:
 ```sh
 cmake -S . -B build -G Ninja
 cmake --build build
-./build/ICmon
+./build/icmon
 ```
 
 Run the tests (they need no camera; the camera side is simulated by test-only code):

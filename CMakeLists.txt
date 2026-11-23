@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(icmon VERSION 0.22 LANGUAGES CXX)
+project(icmon VERSION 0.23 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -85,7 +85,7 @@ if(GTK4_FOUND AND GST_FOUND)
   endif()
   target_compile_definitions(icmon PRIVATE ICMON_VERSION="${PROJECT_VERSION}")
   target_compile_options(icmon PRIVATE -Wall -Wextra)
-  set_target_properties(icmon PROPERTIES OUTPUT_NAME ICmon)
+  set_target_properties(icmon PROPERTIES OUTPUT_NAME icmon)
   # the icon is found next to the executable in the build tree (<exe folder>/icons), else in the installed share/icons
   file(COPY ${CMAKE_SOURCE_DIR}/data/icons DESTINATION ${CMAKE_BINARY_DIR})
 
